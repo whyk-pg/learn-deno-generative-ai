@@ -3,7 +3,7 @@
   "packages": {
     "specifiers": {
       "jsr:@std/dotenv@^0.224.0": "jsr:@std/dotenv@0.224.0",
-      "npm:@langchain/openai@^0.0.28": "npm:@langchain/openai@0.0.28_zod@3.23.5_openai@4.40.0"
+      "npm:@langchain/anthropic@^0.1.16": "npm:@langchain/anthropic@0.1.16_zod@3.23.5"
     },
     "jsr": {
       "@std/dotenv@0.224.0": {
@@ -11,29 +11,42 @@
       }
     },
     "npm": {
-      "@langchain/core@0.1.61_openai@4.40.0_zod@3.23.5": {
+      "@anthropic-ai/sdk@0.20.8": {
+        "integrity": "sha512-dTMDrWYIFyoSr9P0b/gT2Nu1scBuEq4LU9SGX901ktP4aQxs2jiSWq6A80pRmVxyjFl3ngFvcOmVVrP0NHNhOg==",
+        "dependencies": {
+          "@types/node": "@types/node@18.19.29",
+          "@types/node-fetch": "@types/node-fetch@2.6.11",
+          "abort-controller": "abort-controller@3.0.0",
+          "agentkeepalive": "agentkeepalive@4.5.0",
+          "form-data-encoder": "form-data-encoder@1.7.2",
+          "formdata-node": "formdata-node@4.4.1",
+          "node-fetch": "node-fetch@2.7.0",
+          "web-streams-polyfill": "web-streams-polyfill@3.3.3"
+        }
+      },
+      "@langchain/anthropic@0.1.16_zod@3.23.5": {
+        "integrity": "sha512-vCbwkZ3pkMSKf67fBgNlslvuW9f3EZGBbO8Ic2etgX3xFl6L0WuMtfS26P1FCDpRwaKuC1BrCj2aLAeMzMq/Fg==",
+        "dependencies": {
+          "@anthropic-ai/sdk": "@anthropic-ai/sdk@0.20.8",
+          "@langchain/core": "@langchain/core@0.1.61_zod@3.23.5",
+          "fast-xml-parser": "fast-xml-parser@4.3.6",
+          "zod": "zod@3.23.5",
+          "zod-to-json-schema": "zod-to-json-schema@3.23.0_zod@3.23.5"
+        }
+      },
+      "@langchain/core@0.1.61_zod@3.23.5": {
         "integrity": "sha512-C8OkAly+ugvXsL8TACCmFv9WTTcT4gvQaG6NbrXCOzibBCywfxxcTqEMOyg3zIKpxHEmR0DHqh0OiJRHocnsCg==",
         "dependencies": {
           "ansi-styles": "ansi-styles@5.2.0",
           "camelcase": "camelcase@6.3.0",
           "decamelize": "decamelize@1.2.0",
           "js-tiktoken": "js-tiktoken@1.0.11",
-          "langsmith": "langsmith@0.1.22_openai@4.40.0",
+          "langsmith": "langsmith@0.1.22",
           "ml-distance": "ml-distance@4.0.1",
           "mustache": "mustache@4.2.0",
           "p-queue": "p-queue@6.6.2",
           "p-retry": "p-retry@4.6.2",
           "uuid": "uuid@9.0.1",
-          "zod": "zod@3.23.5",
-          "zod-to-json-schema": "zod-to-json-schema@3.23.0_zod@3.23.5"
-        }
-      },
-      "@langchain/openai@0.0.28_zod@3.23.5_openai@4.40.0": {
-        "integrity": "sha512-2s1RA3/eAnz4ahdzsMPBna9hfAqpFNlWdHiPxVGZ5yrhXsbLWWoPcF+22LCk9t0HJKtazi2GCIWc0HVXH9Abig==",
-        "dependencies": {
-          "@langchain/core": "@langchain/core@0.1.61_openai@4.40.0_zod@3.23.5",
-          "js-tiktoken": "js-tiktoken@1.0.11",
-          "openai": "openai@4.40.0",
           "zod": "zod@3.23.5",
           "zod-to-json-schema": "zod-to-json-schema@3.23.0_zod@3.23.5"
         }
@@ -121,6 +134,12 @@
         "integrity": "sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==",
         "dependencies": {}
       },
+      "fast-xml-parser@4.3.6": {
+        "integrity": "sha512-M2SovcRxD4+vC493Uc2GZVcZaj66CCJhWurC4viynVSTvrpErCShNcDz1lAho6n9REQKvL/ll4A4/fw6Y9z8nw==",
+        "dependencies": {
+          "strnum": "strnum@1.0.5"
+        }
+      },
       "form-data-encoder@1.7.2": {
         "integrity": "sha512-qfqtYan3rxrnCk1VYaA4H+Ms9xdpPqvLZa6xmMgFvhO32x7/3J/ExcTd6qpxM0vH2GdMI+poehyBZvqfMTto8A==",
         "dependencies": {}
@@ -156,12 +175,11 @@
           "base64-js": "base64-js@1.5.1"
         }
       },
-      "langsmith@0.1.22_openai@4.40.0": {
+      "langsmith@0.1.22": {
         "integrity": "sha512-N9t9Cf1/F8DJweFMLi8Y7521gS17Cj6aqIuDQMYSnMqhOlPa8eKDo9dNcstcIax6C12XQi039/D/0tiMTS/INg==",
         "dependencies": {
           "@types/uuid": "@types/uuid@9.0.8",
           "commander": "commander@10.0.1",
-          "openai": "openai@4.40.0",
           "p-queue": "p-queue@6.6.2",
           "p-retry": "p-retry@4.6.2",
           "uuid": "uuid@9.0.1"
@@ -230,19 +248,6 @@
         "integrity": "sha512-1MQz1Ed8z2yckoBeSfkQHHO9K1yDRxxtotKSJ9yvcTUUxSvfvzEq5GwBrjjHEpMlq/k5gvXdmJ1SbYxWtpNoVg==",
         "dependencies": {}
       },
-      "openai@4.40.0": {
-        "integrity": "sha512-ofh9qMxRPDSZTWYvifScusMfnyIwEQL3w+fv3ucQGn3cIn0W6Zw4vXSUod8DwYfcX/hkAx9/ZvWrdkFYnVXlmQ==",
-        "dependencies": {
-          "@types/node": "@types/node@18.19.29",
-          "@types/node-fetch": "@types/node-fetch@2.6.11",
-          "abort-controller": "abort-controller@3.0.0",
-          "agentkeepalive": "agentkeepalive@4.5.0",
-          "form-data-encoder": "form-data-encoder@1.7.2",
-          "formdata-node": "formdata-node@4.4.1",
-          "node-fetch": "node-fetch@2.7.0",
-          "web-streams-polyfill": "web-streams-polyfill@3.3.3"
-        }
-      },
       "p-finally@1.0.0": {
         "integrity": "sha512-LICb2p9CB7FS+0eR1oqWnHhp0FljGLZCWBE9aix0Uye9W8LTQPwMTYVGWQWIw9RdQiDg4+epXQODwIYJtSJaow==",
         "dependencies": {}
@@ -269,6 +274,10 @@
       },
       "retry@0.13.1": {
         "integrity": "sha512-XQBQ3I8W1Cge0Seh+6gjj03LbmRFWuoszgK9ooCpwYIrhhoO80pfq4cUkU5DkknwfOfFteRwlZ56PYOGYyFWdg==",
+        "dependencies": {}
+      },
+      "strnum@1.0.5": {
+        "integrity": "sha512-J8bbNyKKXl5qYcR36TIO8W3mVGVHrmmxsd5PAItGkmyzwJvybiw2IVq5nqd0i4LSNSkB/sx9VHllbfFdr9k1JA==",
         "dependencies": {}
       },
       "tr46@0.0.3": {
@@ -318,7 +327,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@std/dotenv@^0.224.0",
-      "npm:@langchain/openai@^0.0.28",
+      "npm:@langchain/anthropic@^0.1.16",
       "npm:langchain@^0.1.36"
     ]
   }

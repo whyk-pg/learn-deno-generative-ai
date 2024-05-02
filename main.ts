@@ -1,8 +1,9 @@
-import { ChatOpenAI } from "@langchain/openai";
+import { ChatAnthropic } from "@langchain/anthropic";
 import "@std/dotenv/load";
 
-const chatModel = new ChatOpenAI({
-  apiKey: Deno.env.get("OPENAI_API_KEY"),
+const chatModel = new ChatAnthropic({
+  apiKey: Deno.env.get("ANTHROPIC_API_KEY"),
 });
 
-await chatModel.invoke("what is LangSmith?");
+const message = await chatModel.invoke("what is LangSmith?");
+console.log(message.content);
