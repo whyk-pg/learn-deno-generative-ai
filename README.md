@@ -5,6 +5,7 @@ Denoでの生成AI活用を手習いし、実務や個人活動で活かすた�
 
 ## 本リポジトリの達成目標
 - [x] AnthropicのAPIを使って、Langchainを動作させる
+- [ ] Quickstartを一通りやる
 - [ ] 日本語から英語のslugを生成するAPIの作成
 
 ## 作業ログ
