@@ -1,12 +1,13 @@
 {
   "tasks": {
-    "start": "deno run --allow-net=api.anthropic.com --allow-read=.env,.env.defaults,.env.example --allow-env=LANGCHAIN_TRACING_V2,LANGCHAIN_VERBOSE,LANGCHAIN_TRACING,DEBUG,ANTHROPIC_API_KEY,ANTHROPIC_BASE_URL,ANTHROPIC_AUTH_TOKEN main.ts"
+    "start": "deno run --allow-net=api.anthropic.com,docs.smith.langchain.com --allow-read=.env,.env.defaults,.env.example --allow-env=LANGCHAIN_TRACING_V2,LANGCHAIN_VERBOSE,LANGCHAIN_TRACING,DEBUG,ANTHROPIC_API_KEY,ANTHROPIC_BASE_URL,ANTHROPIC_AUTH_TOKEN main.ts"
   },
   "imports": {
     "@langchain/anthropic": "npm:@langchain/anthropic@^0.1.16",
     "@langchain/core": "npm:@langchain/core@^0.1.61",
     "@std/dotenv": "jsr:@std/dotenv@^0.224.0",
-    "langchain": "npm:langchain@^0.1.36"
+    "langchain": "npm:langchain@^0.1.36",
+    "deno_dom": "https://deno.land/x/deno_dom@v0.1.45/deno-dom-wasm.ts"
   },
   "fmt": {
     "exclude": ["README.md"]
