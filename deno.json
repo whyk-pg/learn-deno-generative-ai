@@ -1,0 +1,13 @@
+{
+  "tasks": {
+    "start": "deno run --allow-net=api.openai.com --allow-read=.env,.env.defaults,.env.example --allow-env=LANGCHAIN_TRACING_V2,OPENAI_API_KEY,AZURE_OPENAI_API_KEY,AZURE_OPENAI_API_INSTANCE_NAME,AZURE_OPENAI_API_DEPLOYMENT_NAME,AZURE_OPENAI_API_VERSION,AZURE_OPENAI_BASE_PATH,OPENAI_ORGANIZATION,LANGCHAIN_VERBOSE,LANGCHAIN_TRACING,OPENAI_BASE_URL,OPENAI_ORG_ID,OPENAI_PROJECT_ID,DEBUG --watch main.ts"
+  },
+  "imports": {
+    "@langchain/openai": "npm:@langchain/openai@^0.0.28",
+    "@std/dotenv": "jsr:@std/dotenv@^0.224.0",
+    "langchain": "npm:langchain@^0.1.36"
+  },
+  "fmt": {
+    "exclude": ["README.md"]
+  }
+}
