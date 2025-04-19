@@ -1,15 +1,14 @@
 {
   "tasks": {
-    "start": "deno run --allow-net=api.anthropic.com,docs.smith.langchain.com --allow-read=.env,.env.defaults,.env.example --allow-env=LANGCHAIN_TRACING_V2,LANGCHAIN_VERBOSE,LANGCHAIN_TRACING,DEBUG,ANTHROPIC_API_KEY,ANTHROPIC_BASE_URL,ANTHROPIC_AUTH_TOKEN main.ts"
-  },
-  "imports": {
-    "@langchain/anthropic": "npm:@langchain/anthropic@^0.1.16",
-    "@langchain/core": "npm:@langchain/core@^0.1.61",
-    "@std/dotenv": "jsr:@std/dotenv@^0.224.0",
-    "langchain": "npm:langchain@^0.1.36",
-    "deno_dom": "https://deno.land/x/deno_dom@v0.1.45/deno-dom-wasm.ts"
+    "start": "deno run --env-file -N=openrouter.ai:443 -R=.env -E=OPENROUTER_API_KEY,OPENAI_ORGANIZATION,LANGCHAIN_VERBOSE,LANGSMITH_TRACING_V2,LANGCHAIN_TRACING_V2,LANGSMITH_TRACING,LANGCHAIN_TRACING,OPENAI_ORG_ID,OPENAI_PROJECT_ID,DEBUG main.ts"
   },
   "fmt": {
     "exclude": ["README.md"]
+  },
+  "imports": {
+    "@langchain/core": "npm:@langchain/core@^0.3.45",
+    "@langchain/openai": "npm:@langchain/openai@^0.5.6",
+    "@std/streams": "jsr:@std/streams@^1.0.9",
+    "langchain": "npm:langchain@^0.3.23"
   }
 }
