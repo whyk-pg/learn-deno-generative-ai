@@ -1,10 +1,16 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/streams@^1.0.9": "1.0.9",
     "npm:@langchain/core@~0.3.45": "0.3.45_zod@3.24.3",
     "npm:@langchain/openai@~0.5.6": "0.5.6_@langchain+core@0.3.45__zod@3.24.3_zod@3.24.3_openai@4.95.1__zod@3.24.3",
     "npm:langchain@~0.3.23": "0.3.23_@langchain+core@0.3.45__zod@3.24.3_zod@3.24.3",
     "npm:zod@3": "3.24.3"
+  },
+  "jsr": {
+    "@std/streams@1.0.9": {
+      "integrity": "a9d26b1988cdd7aa7b1f4b51e1c36c1557f3f252880fa6cc5b9f37078b1a5035"
+    }
   },
   "npm": {
     "@cfworker/json-schema@4.1.1": {
@@ -433,6 +439,7 @@
   },
   "workspace": {
     "dependencies": [
+      "jsr:@std/streams@^1.0.9",
       "npm:@langchain/core@~0.3.45",
       "npm:@langchain/openai@~0.5.6",
       "npm:langchain@~0.3.23"
