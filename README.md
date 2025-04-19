@@ -5,7 +5,7 @@ Denoでの生成AI活用を手習いし、実務や個人活動で活かすた�
 
 ## 本リポジトリの達成目標
 - [x] OpenRouterのAPIを使って、OpenAI SDKを動かす
-- [ ] OpenAI SDKをLangChainに置き換える
+- [x] OpenAI SDKをLangChainに置き換える
 
 ## 参考資料
 - [Gemini 2.5 Pro Experimental (free) - API, Providers, Stats | OpenRouter](https://openrouter.ai/google/gemini-2.5-pro-exp-03-25:free)
