@@ -10,8 +10,11 @@ if (!OPENROUTER_API_KEY) {
   Deno.exit(1);
 }
 
+const API_MODEL = Deno.env.get("API_MODEL") ??
+  "google/gemini-2.0-flash-exp:free";
+
 const chat = new ChatOpenAI({
-  model: "google/gemini-2.5-pro-exp-03-25:free",
+  model: API_MODEL,
   openAIApiKey: OPENROUTER_API_KEY,
   temperature: 0.5,
   configuration: {
@@ -22,8 +25,8 @@ const chat = new ChatOpenAI({
 async function main() {
   console.log(`
 +-----------------------------------------------------+
-| Deno + LangChain + OpenRouter CLI                   |
-| モデル: google/gemini-pro-2.5-experimental (free) |
+  Deno + LangChain + OpenRouter CLI
+  モデル: ${API_MODEL}
 +-----------------------------------------------------+
 `);
   console.log("質問を入力してください ('exit' または Ctrl+D で終了)");
