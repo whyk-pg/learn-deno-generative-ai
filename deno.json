@@ -3,6 +3,6 @@
     "projects/*"
   ],
   "fmt": {
-    "exclude": ["README.md"]
+    "exclude": ["**/README.md"]
   }
 }
