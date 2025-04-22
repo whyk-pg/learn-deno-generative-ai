@@ -1,6 +1,7 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@openai/openai@^4.95.1": "4.95.1",
     "jsr:@std/streams@^1.0.9": "1.0.9",
     "npm:@langchain/core@~0.3.45": "0.3.45_zod@3.24.3",
     "npm:@langchain/openai@~0.5.6": "0.5.6_@langchain+core@0.3.45__zod@3.24.3_zod@3.24.3_openai@4.95.1__zod@3.24.3",
@@ -8,6 +9,9 @@
     "npm:zod@3": "3.24.3"
   },
   "jsr": {
+    "@openai/openai@4.95.1": {
+      "integrity": "2f4e88862e5613b7c166051ff5ebcce49c871f78b6dc5c24fa388172e277b701"
+    },
     "@std/streams@1.0.9": {
       "integrity": "a9d26b1988cdd7aa7b1f4b51e1c36c1557f3f252880fa6cc5b9f37078b1a5035"
     }
@@ -445,6 +449,11 @@
           "npm:@langchain/core@~0.3.45",
           "npm:@langchain/openai@~0.5.6",
           "npm:langchain@~0.3.23"
+        ]
+      },
+      "projects/openai-sdk": {
+        "dependencies": [
+          "jsr:@openai/openai@^4.95.1"
         ]
       }
     }
