@@ -438,11 +438,15 @@
     }
   },
   "workspace": {
-    "dependencies": [
-      "jsr:@std/streams@^1.0.9",
-      "npm:@langchain/core@~0.3.45",
-      "npm:@langchain/openai@~0.5.6",
-      "npm:langchain@~0.3.23"
-    ]
+    "members": {
+      "projects/langchain": {
+        "dependencies": [
+          "jsr:@std/streams@^1.0.9",
+          "npm:@langchain/core@~0.3.45",
+          "npm:@langchain/openai@~0.5.6",
+          "npm:langchain@~0.3.23"
+        ]
+      }
+    }
   }
 }

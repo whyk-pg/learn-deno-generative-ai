@@ -1,0 +1,15 @@
+{
+  "name": "@learn-genai/langchain",
+  "tasks": {
+    "start": "deno run --env-file -N=openrouter.ai:443 -R=.env -E=OPENROUTER_API_KEY,OPENAI_ORGANIZATION,LANGCHAIN_VERBOSE,LANGSMITH_TRACING_V2,LANGCHAIN_TRACING_V2,LANGSMITH_TRACING,LANGCHAIN_TRACING,OPENAI_ORG_ID,OPENAI_PROJECT_ID,DEBUG main.ts"
+  },
+  "fmt": {
+    "exclude": ["README.md"]
+  },
+  "imports": {
+    "@langchain/core": "npm:@langchain/core@^0.3.45",
+    "@langchain/openai": "npm:@langchain/openai@^0.5.6",
+    "@std/streams": "jsr:@std/streams@^1.0.9",
+    "langchain": "npm:langchain@^0.3.23"
+  }
+}
