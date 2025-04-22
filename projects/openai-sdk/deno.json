@@ -1,0 +1,12 @@
+{
+  "name": "@learn-genai/openai-sdk",
+  "exports": {
+    "./": "./main.ts"
+  },
+  "tasks": {
+    "start": "deno run --env-file -N=openrouter.ai:443 -R=.env -E=OPENROUTER_API_KEY,API_MODEL,OPENAI_ORG_ID,OPENAI_PROJECT_ID,DEBUG main.ts"
+  },
+  "imports": {
+    "@openai/openai": "jsr:@openai/openai@^4.95.1"
+  }
+}
