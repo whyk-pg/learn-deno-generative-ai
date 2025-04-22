@@ -1,5 +1,8 @@
 {
   "name": "@learn-genai/langchain",
+  "exports": {
+    "./": "./main.ts"
+  },
   "tasks": {
     "start": "deno run --env-file -N=openrouter.ai:443 -R=.env -E=OPENROUTER_API_KEY,OPENAI_ORGANIZATION,LANGCHAIN_VERBOSE,LANGSMITH_TRACING_V2,LANGCHAIN_TRACING_V2,LANGSMITH_TRACING,LANGCHAIN_TRACING,OPENAI_ORG_ID,OPENAI_PROJECT_ID,DEBUG main.ts"
   },
